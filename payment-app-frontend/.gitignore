@@ -1,17 +1,31 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+# 🔹 See: https://docs.github.com/get-started/getting-started-with-git/ignoring-files
 
-# Compiled output
+# 📌 Compiled output
 /dist
 /tmp
 /out-tsc
 /bazel-out
 
-# Node
+# 📌 Dependencies
 /node_modules
+/package-lock.json
+/yarn.lock
+/pnpm-lock.yaml
+
+# 📌 Logs & Debugging
 npm-debug.log
 yarn-error.log
+pnpm-debug.log
+lerna-debug.log
+testem.log
+libpeerconnection.log
+/coverage
 
-# IDEs and editors
+# 📌 Angular & TypeScript Cache
+/.angular/cache
+/.angular/cache/**
+
+# 📌 IDEs and Editors
 .idea/
 .project
 .classpath
@@ -20,7 +34,7 @@ yarn-error.log
 .settings/
 *.sublime-workspace
 
-# Visual Studio Code
+# 📌 Visual Studio Code
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -28,15 +42,71 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
-
-# System files
+# 📌 Mac System Files
 .DS_Store
+
+# 📌 Windows System Files
 Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# 📌 Miscellaneous
+.sass-cache/
+.connect.lock
+/typings
+/karma-results.json
+
+#  **Exclude Unrelated User Files & Personal Directories**
+/ENSF*/            # Ignore ENSF courses
+/ENSF338-Labs/
+/ENSF381/
+/ENSF400/
+/OneDrive/
+/Videos/
+/Music/
+/Downloads/
+/Documents/
+/Pictures/
+/Favorites/
+/IntelGraphicsProfiles/
+/AppData/
+/Contacts/
+/Searches/
+/Saved Games/
+/Recent/
+/SendTo/
+/Start Menu/
+/Templates/
+
+#  **Ignore Python & Jupyter Notebook files**
+*.ipynb
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+#  **Ignore Anaconda and Virtual Environments**
+/.conda/
+/.condarc/
+/.continuum/
+/.anaconda/
+/.matplotlib/
+/ipython/
+/jupyter/
+/keras/
+/virtualenv/
+/venv/
+/env/
+/.venv/
+
+#  **Ignore Docker, Eclipse, and Other Development Files**
+/.docker/
+/.dockerignore
+/.eclipse/
+/.redhat/
+/.toolbox/
+/.vagrant.d/
+/quartus2.ini
+/quartus2.qreg
+/quartus_web_rules_file.txt
